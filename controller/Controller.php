@@ -13,45 +13,32 @@ class Controller
 
     public function get()
     {
-        $users = $this->user->getUsers();
-        include __DIR__ . '/../view/index.php';
+        $genders = ['male', 'female'];
+        $statuses = ['active', 'inactive'];
+        $users = json_decode($this->user->getUsers(), true);
+        include __DIR__ . '/../view/users.php';
     }
 
-    public function add()
+    public function add($name, $email, $gender, $status)
     {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $gender = $_POST['gender'];
-        $status = $_POST['status'];
-
         if (!empty($name) && !empty($email) && !empty($gender) && !empty($status)) {
-            $this->user->createUser([$name, $email, $gender, $status]);
+            $this->user->createUser(['name' => $name, 'email' => $email, 'gender' => $gender, 'status' => $status]);
         }
-
-        header('Location: ../view/index.php');
     }
 
-    public function edit()
+    public function edit($id, $name, $email, $gender, $status)
     {
-        $id = $_POST['id'];
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $gender = $_POST['gender'];
-        $status = $_POST['status'];
-
         if (!empty($id) && !empty($name) && !empty($email) && !empty($gender) && !empty($status)) {
-            $this->user->updateUser($id, [$name, $email, $gender, $status]);
+            $this->user->updateUser($id, ['name' => $name, 'email' => $email, 'gender' => $gender, 'status' => $status]);
         }
 
-        header('Location: ../view/index.php');
+        header('Location: ../index.php');
     }
 
     public function delete()
     {
-        if(!empty($_POST['id'])) {
+        if (!empty($_POST['id'])) {
             $this->user->deleteUser($_POST['id']);
         }
-
-        header('Location: ../view/index.php');
     }
 }
