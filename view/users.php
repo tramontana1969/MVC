@@ -14,8 +14,8 @@
             <th>email</th>
             <th>gender</th>
             <th>status</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th></th>
+            <th></th>
         </tr>
 
         <?php foreach ($users as $user) :
