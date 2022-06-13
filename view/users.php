@@ -39,18 +39,18 @@
                                 <input type="hidden" name="action" value="update"/>
                                 <?php echo '<input type="hidden" name="id" value="' . $user["id"] . '" />' ?>
                                 <div class="mb-3">
-                                    <label for="InputName" class="form-label">Name</label>
+                                    <label for="inputName" class="form-label">Name</label>
                                     <?php echo '<input type="text" name="name" value="' . $user["name"] . '"
-                                                class="form-control" id="InputName">'; ?>
+                                                class="form-control" id="inputName">'; ?>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="InputEmail" class="form-label">Email</label>
+                                    <label for="inputEmail" class="form-label">Email</label>
                                     <?php echo '<input type="email" name="email" class="form-control"
-                                                       value="' . $user['email'] . '" id="InputEmail">'; ?>
+                                                       value="' . $user['email'] . '" id="inputEmail">'; ?>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-check-label" for="InputGender">Gender</label>
-                                    <select class="form-select" id="InputGender" aria-label="Gender" name="gender">
+                                    <label class="form-check-label" for="inputGender">Gender</label>
+                                    <select class="form-select" id="inputGender" aria-label="gender" name="gender">
                                         <?php
                                         foreach ($genders as $key => $value):
                                             $selected = ($user['gender'] === $key) ? 'selected' : '';
@@ -60,8 +60,8 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-check-label" for="InputStatus">Status</label>
-                                    <select class="form-select" id="InputStatus" aria-label="Status" name="status">
+                                    <label class="form-check-label" for="inputStatus">Status</label>
+                                    <select class="form-select" id="inputStatus" aria-label="status" name="status">
                                         <?php
                                         foreach ($statuses as $key => $value):
                                             $selected = ($user['status'] === $key) ? 'selected' : '';
@@ -122,17 +122,17 @@
                     <form method="post" action="routes.php">
                         <input type="hidden" name="action" value="add"/>
                         <div class="mb-3">
-                            <label for="InputName" class="form-label">Name</label>
-                            <input type="text" name="name" class="form-control" id="InputName"
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="inputName"
                                    aria-describedby="Name">
                         </div>
                         <div class="mb-3">
-                            <label for="InputEmail" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" id="InputEmail">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" id="inputEmail">
                         </div>
                         <div class="mb-3">
-                            <label class="form-check-label" for="InputGender">Gender</label>
-                            <select class="form-select" id="InputGender" aria-label="Gender" name="gender">
+                            <label class="form-check-label" for="inputGender">Gender</label>
+                            <select class="form-select" id="inputGender" aria-label="gender" name="gender">
                                 <option>Select Gender</option>
                                 <?php foreach ($genders as $key => $value):
                                     echo '<option value="' . $key . '">' . $value . '</option>';
@@ -140,8 +140,8 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-check-label" for="InputStatus">Status</label>
-                            <select class="form-select" id="InputStatus" aria-label="Status" name="status">
+                            <label class="form-check-label" for="inputStatus">Status</label>
+                            <select class="form-select" id="inputStatus" aria-label="status" name="status">
                                 <option>Select Status</option>
                                 <?php foreach ($statuses as $key => $value):
                                     echo '<option value="' . $key . '">' . $value . '</option>';
