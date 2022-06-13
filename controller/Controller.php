@@ -13,8 +13,8 @@ class Controller
 
     public function get()
     {
-        $genders = ['male', 'female'];
-        $statuses = ['active', 'inactive'];
+        $genders = ['male' => 'Male', 'female' => 'Female'];
+        $statuses = ['active' => 'Active', 'inactive' => 'Inactive'];
         $users = json_decode($this->user->getUsers(), true);
         include __DIR__ . '/../view/users.php';
     }
