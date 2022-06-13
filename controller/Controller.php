@@ -16,7 +16,7 @@ class Controller
         $genders = ['male' => 'Male', 'female' => 'Female'];
         $statuses = ['active' => 'Active', 'inactive' => 'Inactive'];
         $users = json_decode($this->user->getUsers(), true);
-        include __DIR__ . '/../view/users.php';
+        require_once __DIR__ . '/../view/users.php';
     }
 
     public function add($name, $email, $gender, $status)
