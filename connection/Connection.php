@@ -6,7 +6,7 @@ class Connection
 {
     public static array $user_data;
 
-    static function connectToRest(string $url, string $method)
+    static function connectToRest(string $url, string $method): string
     {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, Config::getConfig());

@@ -12,12 +12,12 @@ class Router
         $this->controller = new Controller();
     }
 
-    public function post($name, $email, $gender, $status)
+    public function post(string $name, string $email, string $gender, string $status)
     {
         $this->controller->add($name, $email, $gender, $status);
     }
 
-    public function put($id, $name, $email, $gender, $status)
+    public function put(string $id, string $name, string $email, string $gender, string $status)
     {
         $this->controller->edit($id, $name, $email, $gender, $status);
     }
