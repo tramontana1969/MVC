@@ -15,13 +15,13 @@ switch ($action) {
     case 'add':
         $router->post($name, $email, $gender, $status);
         header('Location: index.php');
-        break;
+        exit();
     case 'update':
         $router->put($id, $name, $email, $gender, $status);
         header('Location: index.php');
-        break;
+        exit();
     case 'delete':
         $router->delete();
         header('Location: index.php');
-        break;
+        exit();
 }
