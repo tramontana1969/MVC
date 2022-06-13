@@ -52,9 +52,9 @@
                                     <label class="form-check-label" for="InputGender">Gender</label>
                                     <select class="form-select" id="InputGender" aria-label="Gender" name="gender">
                                         <?php
-                                        foreach ($genders as $gender):
-                                            $selected = ($user['gender'] === $gender) ? 'selected' : '';
-                                            echo '<option ' . $selected . ' value="' . $gender . '">' . $gender . '</option>';
+                                        foreach ($genders as $key => $value):
+                                            $selected = ($user['gender'] === $key) ? 'selected' : '';
+                                            echo '<option ' . $selected . ' value="' . $key . '">' . $value . '</option>';
                                         endforeach;
                                         ?>
                                     </select>
@@ -63,9 +63,9 @@
                                     <label class="form-check-label" for="InputStatus">Status</label>
                                     <select class="form-select" id="InputStatus" aria-label="Status" name="status">
                                         <?php
-                                        foreach ($statuses as $status):
-                                            $selected = ($user['status'] === $status) ? 'selected' : '';
-                                            echo '<option ' . $selected . ' value="' . $status . '">' . $status . '</option>';
+                                        foreach ($statuses as $key => $value):
+                                            $selected = ($user['status'] === $key) ? 'selected' : '';
+                                            echo '<option ' . $selected . ' value="' . $key . '">' . $value . '</option>';
                                         endforeach;
                                         ?>
                                     </select>
