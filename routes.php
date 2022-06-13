@@ -4,12 +4,12 @@ require_once 'router/Router.php';
 
 $router = new Router();
 
-$action = $_POST['action'];
-$id = $_POST['id'];
-$name = $_POST['name'];
-$email = $_POST['email'];
-$gender = $_POST['gender'];
-$status = $_POST['status'];
+$action = htmlspecialchars($_POST['action'], ENT_QUOTES);
+$id = htmlspecialchars($_POST['id'], ENT_QUOTES);
+$name = htmlspecialchars($_POST['name'], ENT_QUOTES);
+$email = htmlspecialchars($_POST['email'], ENT_QUOTES);
+$gender = htmlspecialchars($_POST['gender'], ENT_QUOTES);
+$status = htmlspecialchars($_POST['status'], ENT_QUOTES);
 
 switch ($action) {
     case 'add':
